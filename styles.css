@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header .header-content h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header .header-content p {
+  margin: 10px 0 0;
+}
+
+section {
+  padding: 20px;
+  margin: 20px auto;
+  background: white;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* プロフィールセクションのスタイル */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-text {
+  flex-grow: 1;
+}
+
+.profile-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.works-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.work {
+  position: relative;
+  width: calc(33.33% - 13.33px); /* 3つ並べる幅 */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* タイトルのためのスペースを追加 */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.work img {
+  width: 260px; /* 各画像の幅をピクセルで指定 */
+  height: 220px; /* 各画像の高さをピクセルで指定 */
+  object-fit: cover; /* 画像がコンテナに収まるよう調整 */
+  display: block;
+  transition: opacity 0.3s;
+}
+
+.work:hover img {
+  opacity: 0.3;
+}
+
+.work h3,
+.work p {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s, color 0.3s;
+  pointer-events: none;
+}
+
+.work:hover h3,
+.work:hover p {
+  opacity: 1;
+  color: black;
+}
+
+.work-title {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* スキルセットセクションのスタイル */
+#skills {
+  background: white;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.skill {
+  text-align: center;
+  width: 90%;
+}
+
+.skill img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2c3e50;
+  color: white;
+  margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .works-container {
+      justify-content: space-around;
+  }
+
+  .work {
+      width: 45%; /* 画面幅が小さくなったときに2列表示 */
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width:800px) {
+  .skills-container {
+      grid-template-columns: 1fr;
+  }
+
+  .work {
+      width: 100%; /* 最小画面サイズで1列表示 */
+      margin-bottom: 20px;
+  }
+}
+#links {
+  padding: 20px;
+  margin: 20px auto;
+  background: white;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#links h2 {
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links a {
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.links a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.links img {
+  width: 80px; /* お好きなサイズに調整できます */
+  height: 80px; /* お好きなサイズに調整できます */
+  display: block;
+}
